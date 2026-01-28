@@ -2,6 +2,7 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { SignedOut } from "@clerk/nextjs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { RedirectIfAuthenticated } from "@/components/redirect-if-authenticated";
 
 export default async function Home() {
   const { userId } = await auth();
@@ -12,6 +13,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-[calc(100vh-60px)] items-center justify-center px-4 py-12">
+      <RedirectIfAuthenticated />
       <SignedOut>
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">

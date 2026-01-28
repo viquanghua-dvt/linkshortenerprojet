@@ -81,6 +81,12 @@ Detailed guidelines are separated into the following documents in the `/docs` di
 - Minimize client-side JavaScript bundles
 - Use Next.js built-in optimizations
 
+### 8. Next.js Routing & Middleware
+- **NEVER use middleware.ts** - This approach is deprecated in Next.js 16 and later versions
+- **Always use proxy.ts instead** - This is the correct pattern for this project
+- The `proxy.ts` file handles routing and request interception
+- Any middleware-related functionality must be implemented in `proxy.ts`
+
 ## Getting Started
 
 **Before starting ANY work**, you MUST read the relevant documentation files in the `/docs` directory that apply to your task.
