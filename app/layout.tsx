@@ -41,10 +41,10 @@ export default function RootLayout({
             <div className="text-lg font-semibold">Link Shortener</div>
             <nav className="flex items-center gap-2">
               <SignedOut>
-                <SignInButton>
+                <SignInButton mode="modal">
                   <Button variant="outline">Sign In</Button>
                 </SignInButton>
-                <SignUpButton>
+                <SignUpButton mode="modal">
                   <Button>Sign Up</Button>
                 </SignUpButton>
               </SignedOut>
